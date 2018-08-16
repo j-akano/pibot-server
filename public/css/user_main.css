@@ -1,0 +1,881 @@
+@charset "utf-8";
+
+
+/*
+
+再ログイン、
+
+*/
+
+
+
+
+/* -------------------------------------------
+
+ input系
+ 
+--------------------------------------------------- */
+
+
+input[type="text"],
+input[type="password"]{
+	border:1px solid #849FBA;
+	background:#FAFAFA;
+	padding:5px 3px;
+	margin-bottom:5px;
+	height:18px;
+}
+
+input.inperr{
+	background:#FFE4E8;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+	border:1px solid #EEA34A!important;
+	background: #F3FFD8!important;
+}
+
+input[type="image"]:hover {
+	opacity:0.6;
+	filter:alpha(opacity=60);
+	-ms-filter: "alpha( opacity=60 )";
+	background:none!important;
+}
+
+
+/* --------------------------------------
+
+　title
+
+-------------------------------------- */
+
+h4{
+	margin:58px auto 18px;
+	font-size:150%;
+	font-weight:bold;
+	padding:8px 0 8px 35px;
+}
+h4#short{
+	margin:58px 0 18px 54px;
+	font-size:150%;
+	font-weight:bold;
+	padding:8px 0 8px 35px;
+}
+h4.login{
+	background:url(../images/user/tticon_login.png) 0 5px no-repeat;
+}
+
+
+
+/* --------------------------------------
+
+　外側
+
+-------------------------------------- */
+
+#wrapper{
+	margin:0 auto;
+	padding:0;
+	overflow:hidden;
+	width:970px;
+}
+
+
+/* --------------------------------------
+
+　再ログイン画面
+
+-------------------------------------- */
+
+/* 左 ------------------- */
+
+#login_left{
+	width:600px;
+	float:left;
+	overflow:hidden;
+	margin:49px 30px 0 22px;
+	background:#F5F9EE;
+}
+#login_left div.txErrmsg {
+	padding:0;
+	width:500px;
+	margin:10px auto 0;
+	text-align:center;
+}
+#login_left div.txErrmsg p{
+	color:#fff;
+	margin:0;
+	background:#FF0000;
+	text-align:center;
+	line-height:25px;
+}
+#login_left p.btn {
+	text-align:center;
+	padding:35px 0 23px;
+	margin:0 20px;
+	border-bottom:1px solid #ccc;
+}
+#login_left p.btn img{
+	padding:0;
+	margin:15px 0 0;
+}
+
+#login_left h5{
+	margin:20px auto 0;
+	padding:0 0 0;
+	font-size:90%;
+	font-weight:bold;
+	width:510px;
+}
+#login_left h5 img{
+	vertical-align:middle;
+	margin:0 5px 0 0;
+}
+#login_left .formcheck{
+	font-size:90%;
+	padding:0;
+	margin:10px auto 0;
+	overflow:hidden;
+	width:480px;
+}
+#login_left .formcheck span {
+	width:430px;
+	height:17px;
+	margin:5px 10px 0 3px;
+	background:url(../images/user/icon_wyaji.png) right top no-repeat;
+	float:left;
+}
+#login_left .formcheck input.chk {
+	width:25px;
+	height:15px;
+	background:#FAFAFA;
+	border:1px solid #849FBA;
+	padding:5px 3px;
+	margin-bottom:5px;
+	float:left;
+}
+#login_left .formcheck_kome{
+	font-size:90%;
+	width:480px;
+	margin:0 auto 0;
+	color:#ff0000;
+}
+#login_left p.btn2 {
+	text-align:center;
+	padding:25px;
+	margin:0 0 0;
+}
+#login_left p.btn2 img{
+	padding:0;
+	margin:0 10px;
+}
+
+
+
+/* table
+
+ --------------------------------- */
+
+
+/* 緑 ------------------- */
+
+table.green {
+	border-collapse: collapse;
+	width:520px;
+	margin:25px auto 0;
+}
+table.green th {
+	border:1px solid #CECECE;
+	width:136px;
+	padding:12px;
+	vertical-align:middle;
+	font-weight:normal;
+	background:#F7FEF2;
+}
+table.green th span.tt{
+	float:left;
+	font-weight:bold;
+}
+table.green th span.kome{
+	float:right;
+	color:#ff0000;
+	font-size:80%;
+}
+table.green td {
+	padding:8px 18px;
+	border:1px solid #CECECE;
+	vertical-align:middle;
+	background:#fff;
+}
+table.green td p.komekai{/* kome改行用 */
+	font-size:80%;
+	margin:3px 0 0 0;
+	clear:both;
+}
+table.green td.txID input{
+	width:237px;
+}
+
+
+
+
+
+
+/* 右 ------------------- */
+
+
+#login_right{
+	width:300px;
+	float:left;
+	margin:45px 0 0;
+}
+
+#login_right h6{
+	margin:0 0 0;
+	padding:0;
+}
+#login_right p.idpass{
+	margin:0 0 25px;
+	padding:10px 15px 20px;
+	border:1px solid #B9B9B9;
+}
+#login_right p.idpass span{
+	margin:0 0 0;
+	padding:0;
+	font-size:90%;
+}
+#login_right p.idpass a{
+	margin:17px auto 0;
+	padding:0;
+	width:198px;
+	display:block;
+}
+
+
+/* GCwebサービスについて  */
+
+
+div.aboutmail{
+	width:300px;
+	margin:30px auto 0;
+	padding:0;
+	overflow:hidden;
+}
+div.aboutmail p.about{
+	margin:0 0 0;
+	padding:0;
+	font-weight:bold;
+	background:url(../images/user/aboutmail_tt.png) 0 0 no-repeat;
+	line-height:42px;
+	vertical-align:middle;
+	text-align:center;
+}
+div.aboutmail p.about span{
+	color:#6BB407;
+}
+div.aboutmail ul{
+	margin:0 0 0;
+	padding:10px 8px;
+	border:1px solid #ccc;
+}
+div.aboutmail li{
+	margin:0 0;
+	padding:5px 0 5px 16px;
+	background:url(../common/images/icon_yaji.png) 3px 8px no-repeat;
+	font-size:80%;
+}
+div.aboutmail li.dot{
+	border-bottom:1px dotted #ccc;
+	padding:5px 0 10px 16px;
+	margin:0 0 5px;
+}
+
+
+
+
+
+
+
+/* メンテナンスお知らせ ------------------- */
+
+
+div.mente{
+	width:930px;
+	clear:both;
+	margin:0 auto;
+	padding:60px 0 0;
+}
+div.mente h6{
+	margin:0 0 0;
+	padding:10px 17px;
+	overflow:hidden;
+	background:url(../images/user/icon_mente.png) 17px 9px no-repeat;
+}
+div.mente h6 span.tt{
+	margin:0 0 0;
+	padding:4px 0 0 30px;
+	float:left;
+	font-weight:bold;
+}
+div.mente table{
+	margin:3px auto;
+	padding:25px;
+	width:928px;
+	font-size:90%;
+	border-collapse:collapse;
+}
+div.mente th{
+	margin:0;
+	padding:8px;
+	background:#E5E5E5;
+	text-align:center;
+	border:1px solid #CECECE;
+}
+div.mente th.about{
+	width:250px;
+}
+div.mente td{
+	margin:0;
+	padding:12px;
+	border:1px solid #CECECE;
+	text-align:center;
+}
+div.mente td.system{
+	text-align:left;
+	padding:12px 30px;
+}
+div.mente ul{
+	margin:35px 0 100px 55px;
+	padding:0;
+	overflow:hidden;
+}
+div.mente ul li.title{
+	margin:0 0 0;
+	padding:0 0 10px;
+	color:#ff0000;
+	font-weight:bold;
+	font-size:90%;
+}
+div.mente ul li.txt{
+	margin:0 0 0 15px;
+	padding:0 0 5px 0;
+	font-size:90%;
+	list-style:disc;
+	line-height:1.4;
+}
+
+
+/* top_norton ------------------- */
+
+div.top_norton{
+	margin:30px auto 0;
+	padding:0;
+	width:335px;
+	text-align:center;
+	overflow:hidden;
+}
+div.top_norton a{
+	margin:0;
+	padding:0;
+	width:108px;
+	display:block;
+	float:left;
+}
+div.top_norton p{
+	margin:20px 0 0;
+	padding:0;
+	font-size:75%;
+	float:right;
+	width:220px;
+	text-align:left;
+	line-height:1.4;
+}
+
+
+/* サポート ------------------- */
+
+div#support_wrap{
+	width:730px;
+	margin:100px auto 70px;
+	padding:0;
+	overflow:hidden;
+}
+div#support_wrap p.comment{
+	margin:0;
+	padding:7px 0 0;
+	font-size:90%;
+}
+div.support{
+	margin:0;
+	padding:0;
+	border:1px solid #ccc;
+	overflow:hidden;
+}
+div.support h6{
+	width:100px;
+	margin:30px 0;
+	padding:0;
+	float:left;
+	text-align:center;
+}
+div.support ul{
+	margin:0 0;
+	padding:20px 0 20px 15px;
+	float:left;
+	width:600px;
+	border-left:1px solid #ccc;
+}
+div.support li.tel{
+	margin:0;
+	padding:0 0 0 ;
+	overflow:hidden;
+	border-bottom:1px dotted #ccc;
+}
+div.support li.tel p.title{
+	margin:15px 0 0;
+	padding:3px 0 5px 37px;
+	float:left;
+	width:197px;
+	color:#6CB608;
+	font-weight:bold;
+	background:url(../images/top/icon_tel.png) 5px 0 no-repeat;
+}
+div.support li.tel p.txt{
+	margin:0;
+	padding:0 0 10px;
+	float:left;
+	width:340px;
+}
+div.support li.tel p.txt span.freedial{
+	margin:0 0 3px;
+	display:block;
+	color:#B92626;
+	font-weight:bold;
+	background:url(../images/user/icon_freedial.png) 0 5px no-repeat;
+	padding:3px 0 3px 40px;
+	font-size:160%;
+}
+div.support li.tel p.txt span.freedial span{
+	margin:0 0 0;
+	padding:0 0 0 0;
+	font-size:50%;
+	color:#484848;
+	font-weight:normal;
+}
+div.support li.tel p.txt span.time{
+	margin:0;
+	padding:0;
+	display:block;
+	padding:0 0 0 0;
+	font-size:80%;
+}
+div.support li.mail{
+	margin:5px 0 5px;
+	padding:0;
+	overflow:hidden;
+}
+div.support li.mail p.title{
+	margin:15px 0 0;
+	padding:3px 0 5px 37px;
+	float:left;
+	width:197px;
+	color:#009898;
+	font-weight:bold;
+	background:url(../images/user/icon_mail.png) 3px 0 no-repeat;
+}
+div.support li.mail p.txt{
+	margin:0;
+	padding:0 0 0;
+	float:left;
+	width:365px;
+}
+div.support li.mail p.txt span.mailadd{
+	margin:3px 0 3px;
+	display:block;
+	font-weight:bold;
+	padding:3px 0 3px 0;
+	font-size:90%;
+}
+div.support li.mail p.txt span.kome{
+	margin:0;
+	padding:0;
+	display:block;
+	padding:0 0 0 0;
+	font-size:70%;
+	color:#B92626;
+}
+
+
+
+
+
+
+
+
+/* --------------------------------------
+
+　ログインヘルプ
+
+-------------------------------------- */
+
+
+/* タイトル ------------------- */
+
+h4.loginhelp{
+	background:url(../images/user/tticon_loginhelp.png) 0 5px no-repeat;
+	margin:58px auto 0 54px;
+	font-size:150%;
+	font-weight:bold;
+	padding:8px 0 8px 35px;
+}
+
+div.loginhelp_main h5{
+	margin:0 auto 0;
+	padding:2px 0 9px;
+	background:#F6F6F6 url(../common/images/h3_line.png) repeat-x bottom;
+	font-size:125%;
+	font-weight:bold;
+	color:#5BAC07;
+}
+div.loginhelp_main h5 span{
+	background:url(../common/images/icon_maru_gray.png) 10px 11px no-repeat;
+	padding:8px 0 6px 35px;
+	display:block;
+}
+
+
+
+/* 中身 ------------------- */
+
+div.loginhelp_main{
+	margin:33px 0 0 54px;
+	padding:0;
+	overflow:hidden;
+	width:872px;
+}
+
+div.loginhelp_main h6.hatena{
+	margin:0 7px 0 20px;
+	padding:30px 0 12px 7px;
+	border-bottom:1px dotted #ccc;
+	font-size:110%;
+	font-weight:bold;
+}
+div.loginhelp_main h6.hatena img{
+	margin:0 7px 0 0;
+	vertical-align:middle;
+}
+
+div.loginhelp_main ul{
+	margin:15px 7px 35px 36px;
+	padding:0;
+}
+div.loginhelp_main li{
+	margin:10px 0;
+	padding:0 0 0 23px;
+	line-height:1.5;
+	font-weight:bold;
+	overflow:hidden;
+}
+div.loginhelp_main a{
+	text-decoration:underline;
+	color:#6BB306;
+}
+div.loginhelp_main li span.kome{
+	font-size:90%;
+	font-weight:normal;
+}
+div.loginhelp_main li.no1{
+	background:url(../images/user/icon_no1.png) 0 3px no-repeat;
+}
+div.loginhelp_main li.no2{
+	background:url(../images/user/icon_no2.png) 0 3px no-repeat;
+}
+div.loginhelp_main li.no3{
+	background:url(../images/user/icon_no3.png) 0 3px no-repeat;
+}
+div.loginhelp_main li.no4{
+	background:url(../images/user/icon_no4.png) 0 3px no-repeat;
+}
+div.loginhelp_main li.no5{
+	background:url(../images/user/icon_no5.png) 0 3px no-repeat;
+}
+div.loginhelp_main li.no6{
+	background:url(../images/user/icon_no6.png) 0 3px no-repeat;
+}
+div.loginhelp_main li.no7{
+	background:url(../images/user/icon_no7.png) 0 3px no-repeat;
+}
+div.loginhelp_main li.answer{
+	background:#F4F4EC;
+	font-size:90%;
+	font-weight:normal;
+	padding:10px 10px 10px 15px;
+	margin:10px 0 20px 23px;
+}
+
+div.loginhelp_main li dl{
+	margin:10px 0 0;
+	padding:0 0 0 0;
+}
+
+div.loginhelp_main li dt{
+	margin:0 0 0;
+	padding:0 0 0 0;
+	float:left;
+	width:80px;
+	color:#ff0000;
+}
+div.loginhelp_main li dd{
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	float:left;
+	width:685px;
+	overflow:hidden;
+}
+div.loginhelp_main li dd p{
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	float:left;
+	background:url(../images/user/icon_wyaji.png) right 3px no-repeat;
+}
+div.loginhelp_main li dd input.chk {
+	width:25px;
+	height:15px;
+	background:#FAFAFA;
+	border:1px solid #849FBA;
+	padding:5px 3px;
+	margin:0 0 0 5px;
+	float:left;
+}
+
+div.loginhelp_main p.copy{
+	margin:0 7px 0 20px;
+	padding:30px 0 20px 15px;
+}
+div.loginhelp_main p.copy_tt{
+	margin:0 7px 0 34px;
+	padding:20px 0 12px 2px;
+	border-bottom:1px dotted #ccc;
+}
+div.loginhelp_main p.copy_tt strong{
+	font-weight:bold;
+	color:#ff0000;
+}
+div.loginhelp_main p.copy_tt span{
+	font-size:90%;
+}
+p.loginhelp_btn{
+	text-align:center;
+	margin:30px auto 40px;
+}
+
+
+
+/* --------------------------------------
+
+　個人情報の取り扱いについて
+
+-------------------------------------- */
+
+
+/* タイトル ------------------- */
+
+h4.privacy{
+	background:url(../images/user/tticon_privacy.png) 5px 10px no-repeat;
+	margin:58px auto 0 54px;
+	font-size:150%;
+	font-weight:bold;
+	overflow:hidden;
+	padding:8px 0 8px 35px;
+}
+h4.privacy a{
+	float:right;
+	width:83px;
+	margin:0 53px 0 0;
+}
+
+
+/* 中身 ------------------- */
+
+div.privacy_main{
+	margin:10px 0 0 54px;
+	padding:0;
+	overflow:hidden;
+	width:872px;
+}
+
+
+div.privacy_main p.copy{
+	margin:0 0 0 0;
+	padding:30px 0 20px 0;
+	line-height:1.5;
+}
+
+div.privacy_main ul.main_section{
+	margin:15px 7px 60px 20px;
+	padding:0;
+}
+div.privacy_main ul.main_section li{
+	margin:0 0 30px;
+	padding:0 0 0 23px;
+	line-height:1.5;
+	overflow:hidden;
+}
+div.privacy_main ul.main_section a{
+	text-decoration:underline;
+	color:#6BB306;
+}
+div.privacy_main li.no1{
+	background:url(../images/user/icon_no1b.png) 0 3px no-repeat;
+}
+div.privacy_main li.no2{
+	background:url(../images/user/icon_no2b.png) 0 3px no-repeat;
+}
+div.privacy_main li.no3{
+	background:url(../images/user/icon_no3b.png) 0 3px no-repeat;
+}
+div.privacy_main li.no4{
+	background:url(../images/user/icon_no4b.png) 0 3px no-repeat;
+}
+div.privacy_main li.no5{
+	background:url(../images/user/icon_no5b.png) 0 3px no-repeat;
+}
+div.privacy_main li.no6{
+	background:url(../images/user/icon_no6b.png) 0 3px no-repeat;
+}
+div.privacy_main li.no7{
+	background:url(../images/user/icon_no7b.png) 0 3px no-repeat;
+}
+
+
+div.privacy_main ul.sub_section{
+	margin:15px 7px 10px 8px;
+	padding:0;
+}
+div.privacy_main ul.sub_section li{
+	margin:10px 0;
+	padding:0 0 0 23px;
+	line-height:1.5;
+	overflow:hidden;
+}
+div.privacy_main ul.sub_section li.noa{
+	background:url(../images/user/icon_alphabet_a.png) 0 5px no-repeat;
+}
+div.privacy_main ul.sub_section li.nob{
+	background:url(../images/user/icon_alphabet_b.png) 0 5px no-repeat;
+}
+div.privacy_main ul.sub_section li.noc{
+	background:url(../images/user/icon_alphabet_c.png) 0 5px no-repeat;
+}
+div.privacy_main ul.sub_section li.nod{
+	background:url(../images/user/icon_alphabet_d.png) 0 5px no-repeat;
+}
+div.privacy_main ul.sub_section li.noe{
+	background:url(../images/user/icon_alphabet_e.png) 0 5px no-repeat;
+}
+
+
+
+div.hosoku{
+	width:750px;
+	margin:50px auto 15px;
+	padding:0;
+}
+
+div.hosoku p.title{
+	margin:0;
+	padding:10px 15px;
+	background:#F4F4EC;
+}
+div.hosoku p.txt{
+	margin:0;
+	padding:10px 5px 20px;
+}
+
+
+/* --------------------------------------
+
+　利用規約
+
+-------------------------------------- */
+
+
+/* タイトル ------------------- */
+
+h4.privacy span.seitei{
+	width:252px;
+	font-weight:normal;
+	font-size:57%;
+	margin:0 0 0 25px;
+}
+
+h5.kiyaku{
+	background:url(../images/user/icon_maru_blue.png) 5px 10px no-repeat;
+	margin:30px auto 0 0;
+	font-size:110%;
+	font-weight:bold;
+	overflow:hidden;
+	padding:8px 0 8px 25px;
+	color:#009898;
+}
+
+
+/* 中身 ------------------- */
+
+div.kiyaku_main{
+	margin:10px 0 0 80px;
+	padding:0;
+	overflow:hidden;
+	width:832px;
+}
+
+div.kiyaku_main ul.main_section{
+	margin:10px 0 30px 5px;
+	padding:0 5px 10px 15px;
+	border-bottom:1px dotted #ccc;
+}
+div.kiyaku_main ul.last{
+	border-bottom:none;
+}
+div.kiyaku_main ul.main_section li{
+	margin:0 0 30px 25px;
+	padding:0 0 0 0;
+	line-height:1.5;
+	list-style:decimal;
+}
+div.kiyaku_main ul.main_section a{
+	text-decoration:underline;
+	color:#6BB306;
+}
+
+div.kiyaku_main ul.sub_section {
+	margin:0 0 10px 0;
+    margin-left: 1.0em;
+	padding:10px 0 0 0;
+}
+div.kiyaku_main ul.sub_section li {
+	margin-bottom:10px;
+    text-indent: -1.0em;
+	list-style:none;
+}
+
+
+div.betuhyou{
+	margin:20px auto 70px 0;
+	padding:15px 20px;
+	background:#F4F4EC;
+}
+
+div.betuhyou p.btitle{
+	margin:0;
+	padding:0 0 15px;
+	font-weight:bold;
+}
+
+div.betuhyou p.btxt{
+	margin:0;
+	padding:0 0 0 10px;
+	line-height:1.4;
+}
