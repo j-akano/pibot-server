@@ -23,9 +23,9 @@
 			<div class="loginbody">
 				<form name="Form1" id="Form1" method="post" action="login/submit">
 					<span class="font-color_red font-size_small">※必須</span><br>
-					<input name="txID" type="text" id="txID" maxlength="8" placeholder="ログインID（半角数字）"><br>
+					<input name="userid" type="text" id="userid" maxlength="8" placeholder="ログインID（半角数字）"><br>
 					<span class="font-color_red font-size_small">※必須</span><br>
-					<input name="txPswd" type="password" id="txPswd" maxlength="32" placeholder="パスワード（半角英数字）"><br>
+					<input name="password" type="password" id="password" maxlength="32" placeholder="パスワード（半角英数字）"><br>
 					<label><input name="" type="checkbox" value="" id="idcheck" />
 					<p class="chktxt">IDの入力を次回より省略する</p></label><br />
 					<div class="align_center tpm25"><input type="image" class="btn_login" src="images/btn_login.png" alt="ログイン" id="sbLogin"></div>
@@ -41,7 +41,7 @@
 			<div class="register_box_in">
 				<h3><img src="images/reg_ttl02.png" alt="ID・パスワードの取得はこちら"></h3>
 				<p>既に組合員の方で、はじめての方はご利用登録をお願いします。</p>
-				<div class="align_center"><a href="index2.html"><img src="images/btn_gcweb.png" alt="GCwebに登録"></a></div>
+				<div class="align_center"><a href="register"><img src="images/btn_gcweb.png" alt="GCwebに登録"></a></div>
 			</div>
 			<div class="register_box_in">
 				<h3><img src="images/reg_ttl01.png" alt="グリーンコープに加入されていない方"></h3>

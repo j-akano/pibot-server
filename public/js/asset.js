@@ -385,7 +385,10 @@ function cmnError(errCode,errMsg) {
 }
 
 function baseUrl() {
-	return window.location.href.replace(/^(https?:\/\/[^\/]+\/[^\/]+\/)(.*)/, '$1');
+	//return window.location.href.replace(/^(https?:\/\/[^\/]+\/[^\/]+\/)(.*)/, '$1');
+        var pathinfo = window.location.href.split('/');
+        pathinfo.pop();
+        return pathinfo.join('/')+'/';
 }
 function Logout() {
 	  showAct();
