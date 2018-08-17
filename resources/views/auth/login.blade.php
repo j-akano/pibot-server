@@ -22,6 +22,7 @@
 		<div id="login_box">
 			<div class="loginbody">
 				<form name="Form1" id="Form1" method="post" action="login/submit">
+					{{ csrf_field() }}
 					<span class="font-color_red font-size_small">※必須</span><br>
 					<input name="userid" type="text" id="userid" maxlength="8" placeholder="ログインID（半角数字）"><br>
 					<span class="font-color_red font-size_small">※必須</span><br>
