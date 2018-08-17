@@ -1,0 +1,1173 @@
+@charset "utf-8";
+html {
+	overflow-y: scroll;
+	margin: 0;
+	padding: 0;
+}
+
+@font-face {
+	font-family: YuGothicM;
+	src: local("Yu Gothic Medium");
+}
+
+body {
+	font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "游ゴシック Medium", YuGothic, YuGothicM, "Hiragino Kaku Gothic ProN", メイリオ, Meiryo, sans-serif;
+	background-image: url(../images/body_bg.png);
+	background-repeat: repeat-x;
+	margin: 0;
+	padding: 0;
+	color: #4E4E4E;
+}
+
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+a {
+	color: #68822A;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #88af2c;
+}
+
+a img {
+	vertical-align: bottom;
+}
+
+hr {
+	height: 1px;
+	margin: 0 0 30px 0;
+	padding: 0;
+	border: 0px dotted #666;
+	border-bottom: 1px dotted #aaaaaa;
+}
+
+/* --------------------------------------
+
+　container
+
+-------------------------------------- */
+
+.container {
+	width: 1000px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+
+/* --------------------------------------
+
+　ヘッダー
+
+-------------------------------------- */
+
+/*ログイン後*/
+
+header {
+	display: block;
+	/* 桜なのでシーズン以外はコメント background-image: url(../images/body_bg2.png);*/
+	background-repeat: no-repeat;
+	background-position: calc(50% - 450px) top;
+}
+
+#header {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	position: relative;
+}
+
+.logo-area {
+	background-image: url(../images/logo_bg.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+	position: relative;
+	height: 77px;
+	width: 205px;
+	color: #666666;
+	top: 0;
+	left: 0;
+	z-index: 112;
+	/*cursor: pointer;*/
+}
+
+.logo-area a {
+	text-decoration: none;
+	color: #666666;
+	display: block;
+}
+
+.logo-area-sec {
+	background-image: url(../images/logo_bg2.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+	position: relative;
+	height: 77px;
+	width: 250px;
+	color: #666666;
+	top: 0;
+	left: 0;
+	z-index: 111;
+	cursor: pointer;
+	animation: moveimg 1s;
+}
+
+@keyframes moveimg {
+	0% {
+		top: -80px;
+	}
+	100% {
+		top: 0px;
+	}
+}
+
+
+.logo-area-sec a {
+	text-decoration: none;
+	color: #666666;
+}
+
+#header h1 {
+	top: 15px;
+	left: 15px;
+	position: absolute;
+}
+
+.logo-top-box {
+	top: 39px;
+	left: 8px;
+	position: absolute;
+}
+
+.logo-top-box img {
+	vertical-align: bottom;
+	margin: 3px;
+}
+
+.logo-number-box {
+	right: 5px;
+	top: 0px;
+	position: absolute;
+	height: 77px;
+	line-height: 77px;
+	padding: 0 5px;
+}
+
+.logo-number {
+	font-size: 3.5rem;
+	letter-spacing: -0.05em;
+}
+
+.logo-number2 {
+	font-size: 1.2rem;
+	margin: 0 0 0 5px;
+	letter-spacing: -0.05em;
+}
+
+.logo-selection {
+	bottom: -14px;
+	right: -9px;
+	position: absolute;
+	z-index: 10;
+}
+
+.hd_change {
+	vertical-align: middle;
+}
+
+.center-box {
+	flex: 1;
+	font-size: 0.750rem;
+	color: #fff;
+}
+
+.center-box span {
+	display: inline-block;
+	padding: 5px;
+}
+
+.center-box_bnr {
+	max-width: 90%;
+	padding: 10px;
+}
+
+.center-box_bnr2 {
+	max-width: 100%;
+	padding: 20px 10px 0px 10px;
+}
+
+.center-box_bnr img {
+	width: 100%;
+	height: auto;
+}
+
+.header-nav {
+	width: 220px;
+	margin-left: auto;
+}
+
+.header-nav ul {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+/*号選択*/
+
+#btn {
+	background: #717171;
+	color: #eeeeee;
+	display: block;
+	margin: 400px auto;
+	width: 70px;
+	text-align: center;
+	font-size: 15px;
+	padding: 5px 0;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+#overlay {
+	display: none;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	position: fixed;
+	top: 0;
+	z-index: 110;
+	background: rgba(0, 0, 0, 0.7);
+}
+
+#text {
+	font-size: 40px;
+	color: #eee;
+	vertical-align: middle;
+	font-weight: bold;
+	max-width: 529px;
+	margin: 120px auto 0 auto;
+	text-align: center;
+	-webkit-animation-duration: 2s;
+	animation-duration: 2s;
+	-webkit-animation-name: slidein;
+	animation-name: slidein;
+}
+
+@-webkit-keyframes slidein {
+	from {
+		margin: 160px auto 0 auto;
+	}
+
+	to {
+		margin: 120px auto 0 auto;
+	}
+}
+
+
+#close {
+	margin: auto;
+	text-align: center;
+	font-size: 15px;
+	padding: 5px 0 5px 10px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+/*シングルページ用ヘッダー*/
+
+header.single {
+	background-image: none;
+}
+
+.logo-single {
+	padding: 10px 0 0 0;
+}
+
+#header .logo-single h1 {
+	top: 15px;
+	left: 15px;
+	position: static;
+}
+
+.gcmail-area {
+	text-align: center;
+}
+
+.gcmailsetting {
+	margin-top: 3px;
+	margin-bottom: 4px;
+	margin-left: -1px;
+}
+
+/* --------------------------------------
+　グローバルナビ
+-------------------------------------- */
+
+#gnavi {
+	background-image: url(../images/gnav_ttl.jpg);
+	background-repeat: no-repeat;
+	background-color: #91B74B;
+	background-position: left top;
+	padding: 0 0 0 78px;
+	margin: 0 0 20px 0;
+	overflow: hidden;
+}
+
+#gnavi li {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+#gnavi li img {
+	vertical-align: bottom;
+}
+
+/* --------------------------------------
+　メイン
+-------------------------------------- */
+
+#main {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+/*左カラム*/
+
+#top-main-column {
+	width: 740px;
+}
+
+/*右カラム*/
+
+#sub-column {
+	width: 220px;
+	margin-left: auto;
+}
+
+.gclogo-area {
+	text-align: center;
+}
+
+.gclogo-rcolumn {
+	margin-top: 15px;
+}
+
+.gctoiawase-rcolumn {
+	margin-top: 10px;
+	width: 165px;
+	height: auto;
+}
+
+/* --------------------------------------
+　左カラム
+-------------------------------------- */
+
+.news {
+	background-image: url(../images/ico_04.png);
+	background-repeat: no-repeat;
+	font-size: 0.750rem;
+	padding: 7px 0 7px 40px;
+	margin: 0 0 20px 0;
+}
+
+/* --------------------------------------
+
+　パンクズ
+
+-------------------------------------- */
+
+#pankuzu {
+	margin: 1px auto 10px;
+	padding: 0;
+	width: 100%;
+	overflow: hidden;
+	font-size: 80%;
+}
+
+#pankuzu a {
+	text-decoration: none;
+}
+
+.cd-breadcrumb,
+.cd-multi-steps {
+	width: 100%;
+}
+
+.cd-breadcrumb::after,
+.cd-multi-steps::after {
+	clear: both;
+	content: "";
+	display: table;
+}
+
+.cd-breadcrumb li,
+.cd-multi-steps li {
+	display: inline-block;
+	float: left;
+	margin: 0.5em 0;
+}
+
+.cd-breadcrumb li::after,
+.cd-multi-steps li::after {
+	display: inline-block;
+	content: '\00bb';
+	margin: 0 .6em;
+	color: #959fa5;
+}
+
+.cd-breadcrumb li:last-of-type,
+.cd-multi-steps li:last-of-type {
+	color: #FF8016;
+}
+
+.cd-breadcrumb li:last-of-type::after,
+.cd-multi-steps li:last-of-type::after {
+	display: none;
+}
+
+.cd-breadcrumb.custom-separator li::after,
+.cd-multi-steps.custom-separator li::after {
+	content: '';
+	height: 16px;
+	width: 16px;
+	background: url(../images/cd-custom-separator.svg) no-repeat center center;
+	vertical-align: middle;
+}
+
+/* --------------------------------------
+　右カラム
+-------------------------------------- */
+
+/*商品検索*/
+#searchbox {
+	color: #fff;
+	background-color: #86AD36;
+	padding: 10px;
+	margin: 0 0 5px 0;
+}
+
+.searchbox_title {
+	font-size: 1em;
+	font-weight: bold;
+	background: url('../images/ico_01x2.png') no-repeat scroll 0 0;
+	background-size: 16px auto;
+	background-position: 2px center;
+	padding: 0 0 0 25px;
+	margin: 0 0 5px 0;
+}
+
+dl.search {
+	position: relative;
+	background-color: #fff;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	-o-border-radius: 6px;
+	-ms-border-radius: 6px;
+	border-radius: 6px;
+	font-size: 0.750rem;
+	margin: 0 0 5px 0;
+}
+
+dl.search dt {
+	margin-right: 40px;
+	padding: 8px 0 8px 8px;
+}
+
+dl.search dt input {
+	width: 100%;
+	height: 24px;
+	line-height: 24px;
+	background: none;
+	border: none;
+}
+
+dl.search dd {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+dl.search dd button {
+	display: block;
+	padding: 10px;
+	background: none;
+	border: none;
+}
+
+dl.search dd button span {
+	display: block;
+	width: 20px;
+	height: 20px;
+	background: url('../images/ico_05x2.png') no-repeat scroll 0 0;
+	background-size: 20px auto;
+}
+
+.sub-text {
+	text-align: center;
+	font-size: 0.625rem;
+	letter-spacing: -0.05em;
+
+}
+
+/*ガイドメニュー*/
+#guide-menu {
+	color: #fff;
+	background-color: #86AD36;
+	padding: 10px;
+	margin: 0 0 0 0;
+}
+
+.guide-menu_list {
+	border-bottom: solid 1px #fff;
+	border-left: solid 1px #fff;
+}
+
+.guide-menu_list li {
+	width: 50%;
+	float: left;
+	vertical-align: middle;
+}
+
+.guide-menu_list li a {
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	border-top: solid 1px #fff;
+	border-right: solid 1px #fff;
+	padding: 5px;
+	font-size: 0.75rem;
+	text-align: center;
+}
+
+.guide-menu_list li a:hover {
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.guide-menu_list li img {
+	width: auto;
+	height: 12px;
+	margin-right: 3px;
+	margin-bottom: 2px;
+	vertical-align: middle;
+}
+
+/*会員メニュー*/
+
+#member-menu {
+	color: #fff;
+	background-color: #86AD36;
+	padding: 10px;
+	margin: 0 0 5px 0;
+}
+
+.member-menu_title {
+	font-size: 1em;
+	font-weight: bold;
+	background: url('../images/ico_02x2.png') no-repeat scroll 0 0;
+	background-size: 18px auto;
+	background-position: 1px center;
+	padding: 0 0 0 25px;
+	margin: 0 0 5px 0;
+}
+
+.ember-menu_name {
+	text-align: center;
+	font-weight: bold;
+}
+
+.member-menu_list {
+	border-bottom: solid 1px #fff;
+	border-left: solid 1px #fff;
+}
+
+.member-menu_list li:nth-child(n + 3) {
+	width: 50%;
+	float: left;
+}
+
+.member-menu_list li a {
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	border-top: solid 1px #fff;
+	border-right: solid 1px #fff;
+	padding: 5px;
+	font-size: 0.813rem;
+	text-align: center;
+}
+
+.member-menu_list li a:hover {
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.side_logout {
+	text-align: center;
+	margin-top: 10px;
+}
+
+.side_logout_btn {
+	text-align: center;
+	padding: 0px;
+	margin: 10px 0 0 0;
+}
+
+.side_logout_btn a {
+	display: inline-block;
+	width: 140px;
+	height: 25px;
+	line-height: 25px;
+	color: #fff;
+	text-decoration: none;
+	font-size: 0.95rem;
+	background: #a3a3a3;
+	border-radius: 12px;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+}
+
+.side_logout_btn a:hover {
+	background: #7e7e7e;
+}
+
+/*お買い物メニュー*/
+
+#shopping-menu {
+	color: #fff;
+	background-color: #86AD36;
+	padding: 10px;
+	margin: 0;
+}
+
+.shopping-menu_title {
+	font-size: 1em;
+	font-weight: bold;
+	background: url('../images/ico_03x2.png') no-repeat scroll 0 0;
+	background-size: auto 19px;
+	background-position: 3px 1px;
+	padding: 0 0 0 25px;
+	margin: 0 0 5px 0;
+}
+
+.shopping-menu_sc {
+	text-align: center;
+	font-size: 0.750rem;
+}
+
+.shopping-menu_sc span {
+	display: inline-block;
+	font-size: 1.313rem;
+	font-weight: bold;
+	padding: 0 10px 0 0;
+}
+
+/* お買い物メニュースケジュール */
+
+.schedule {
+	color: #262626;
+	margin: 0 0 10px 0;
+}
+
+.schedule p.title {
+	width: 106px;
+	text-align: center;
+	font-size: 75%;
+	float: left;
+	padding: 15px 0 0;
+}
+
+.schedule p.date {
+	width: 208px;
+	height: 59px;
+	text-align: center;
+	float: left;
+	background: url(../images/header_schedule.png) left top no-repeat;
+}
+
+.schedule p.date span {
+	text-align: center;
+	display: block;
+	float: left;
+	width: 53px;
+	padding: 26px 0 0;
+}
+
+.schedule p.date span.d01 {
+	margin: 0 15px 0 4px;
+}
+
+.schedule p.date span.d02 {
+	margin: 0 16px 0 0;
+}
+
+.schedule p.date span.d03 {
+	margin: 0 0 0 0;
+}
+
+.schedule p.date b {
+	margin: 0 0 0 0;
+	line-height: 1;
+	display: block;
+	font-size: 90%;
+}
+
+.schedule p.date span span {
+	margin: 0 0 0 0;
+	padding: 0;
+	display: block;
+	font-size: 70%;
+}
+
+.schedule p.simekiri {
+	width: 255px;
+	font-size: 80%;
+	float: left;
+	margin: 2px 0 0 14px;
+}
+
+.schedule p.simekirimsg {
+	width: 540px;
+	font-size: 90%;
+	float: left;
+	margin: 2px 0 0 14px;
+}
+
+/* 注文締切 */
+
+.order-deadline {
+	background-color: #68822A;
+	padding: 5px;
+	margin: 0 0 10px 0;
+	font-size: 0.750rem;
+	line-height: 2em;
+	text-align: center;
+}
+
+.order-deadline b {
+	display: inline-block;
+	margin: 0 2px;
+	line-height: 1;
+	font-size: 1.1rem;
+}
+
+/* 注文バナー */
+
+.side_banner ul li {
+	text-align: center;
+	margin-bottom: 5px;
+}
+
+.side_banner ul li img {
+	background-color: #fff;
+	opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+	width: 190px;
+	height: auto;
+}
+
+.side_banner ul li img:hover {
+	opacity: 0.6;
+}
+
+/* カート点数 */
+
+.txtred {
+	color: #FB120E;
+}
+
+.ordernav ul.cartdata {
+	padding: 0;
+	margin: 10px 0 10px 0;
+	text-align: center;
+	display: block;
+	width: 100%;
+	background-color: #fff;
+	color: #666;
+}
+
+.ordernav ul.cartdata li {
+	padding: 0;
+	margin: 0;
+	line-height: 37px;
+	*line-height: 38px;
+	background: url(../images/ordernav_line.png) bottom repeat-x;
+	overflow: hidden;
+	*margin-bottom: -6px;
+}
+
+.ordernav ul.cartdata li.msg {
+	font-size: 0.750rem;
+	padding: 20px 0;
+	margin: 0;
+	overflow: hidden;
+	background: none;
+	*margin-bottom: -6px;
+}
+
+.ordernav ul.cartdata li.zeikomi {
+	background: none;
+	padding-bottom: 5px;
+}
+
+.ordernav ul.cartdata li p.tt {
+	padding: 0;
+	margin: 0;
+	float: left;
+	width: 67px;
+	text-align: center;
+	font-size: 0.750rem;
+}
+
+.ordernav ul.cartdata li p.item {
+	padding: 0;
+	margin: 0 5px 0 0;
+	float: right;
+	width: 110px;
+	text-align: right;
+}
+
+.ordernav ul.cartdata li p.item span.num {
+	font-size: 110%;
+	font-weight: bold;
+	margin: 0 5px 0 0;
+}
+
+.ordernav ul.cartdata li p.item span.tani {
+	font-size: 90%;
+}
+
+
+/* 購入品リスト */
+
+.ordernav2_title {
+	color: #fff;
+	background-color: #86AD36;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	font-weight: bold;
+}
+
+.ordernav2 {
+	background-color: #E9E9E9;
+	padding: 5px;
+	border: solid 1px #68822A;
+}
+
+.ordernav2 ul.orderlist {
+	padding: 0;
+	margin: -1px 0 0 0;
+	display: block;
+}
+
+.ordernav2 ul.orderlist li {
+	padding: 5px 11px 0;
+	margin: 0;
+	min-height: 58px;
+	border-top: 1px solid #C9C9C9;
+	overflow: hidden;
+	background-color: #fff;
+}
+
+.ordernav2 ul.orderlist li span.mnum {
+	font-size: 0.750rem;
+	background: #fff;
+	border: 1px solid #C9C9C9;
+	padding: 1px 2px;
+	margin: 0;
+	display: block;
+	float: left;
+	line-height: 1;
+}
+
+.ordernav2 ul.orderlist li span.tani {
+	font-size: 0.750rem;
+	padding: 3px 5px 0;
+	margin: 0;
+	display: block;
+	float: left;
+	line-height: 1;
+}
+
+.ordernav2 ul.orderlist li .pname {
+	font-size: 0.750rem;
+	padding: 4px 0 0;
+	line-height: 1.3;
+	margin: 0;
+	clear: both;
+}
+
+/* --------------------------------------
+
+　フッター
+
+-------------------------------------- */
+
+footer {
+	display: block;
+	padding-top: 10%;
+	margin: 40px 0 0 0;
+	background-image: url(../images/ft_bg01.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+#footer {
+	background-color: #91B74B;
+}
+
+.footer_link {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	padding: 20px 0;
+}
+
+.footer_link a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.ft_gclogo {
+	margin: -50px 0 0 0;
+}
+
+a.pp {
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	float: right;
+	padding-top: 10px;
+}
+
+.ft_copy {
+	text-align: center;
+	padding: 5px;
+	font-size: 0.750rem;
+	background-color: #fff;
+	background-image: url(../images/ft_copy_bg.gif);
+	border-bottom: solid 2px #68A652;
+}
+
+/* サポート ------------------- */
+
+div#support_wrap {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #fff;
+	background-image: url(../../images/register_box_bg.png);
+}
+
+div#support_wrap p.comment {
+	margin: 0;
+	padding: 7px 0 0;
+	font-size: 90%;
+}
+
+div.support {
+	margin: 0 10px;
+	padding: 20px 20px 20px 0;
+	border: 1px solid #ccc;
+	overflow: hidden;
+}
+
+div.support h6 {
+	margin: 0;
+	padding: 10px 0;
+	float: left;
+	text-align: center;
+	width: 20%;
+	box-sizing: border-box;
+}
+
+div.support ul {
+	margin: 0;
+	padding: 0;
+	float: left;
+	width: 80%;
+	box-sizing: border-box;
+}
+
+div.support li.tel {
+	margin: 0;
+	padding: 0 0 0;
+	overflow: hidden;
+	border-bottom: 1px dotted #ccc;
+}
+
+div.support li.tel p.title {
+	width: 100%;
+	margin: 0 0 10px;
+	padding: 3px 0 5px 37px;
+	float: left;
+	color: #6CB608;
+	font-weight: bold;
+	background: url(../../images/top/icon_tel.png) 5px 0 no-repeat;
+	font-size: 90%;
+}
+
+div.support li.tel p.txt {
+	margin: 0;
+	padding: 0 0 10px;
+	float: left;
+	width: 100%;
+}
+
+div.support li.tel p.txt span.freedial {
+	margin: 0;
+	display: block;
+	color: #B92626;
+	font-weight: bold;
+	background: url(../../images/user/icon_freedial.png) 0 5px no-repeat;
+	padding: 3px 0 0 40px;
+	font-size: 140%;
+}
+
+div.support li.tel p.txt span.freedial span {
+	margin: 0 0 0;
+	padding: 0 0 0 0;
+	font-size: 50%;
+	color: #484848;
+	font-weight: normal;
+}
+
+div.support li.tel p.txt span.time {
+	margin: 0;
+	padding: 0;
+	display: block;
+	padding: 0 0 0 0;
+	font-size: 90%;
+}
+
+div.support li.mail {
+	margin: 5px 0 5px;
+	padding: 0;
+	overflow: hidden;
+}
+
+div.support li.mail p.title {
+	margin: 15px 0 10px;
+	padding: 3px 0 5px 37px;
+	color: #009898;
+	font-weight: bold;
+	background: url(../../images/user/icon_mail.png) 3px 0 no-repeat;
+	width: 100%;
+	box-sizing: border-box;
+	font-size: 90%;
+}
+
+div.support li.mail p.txt {
+	margin: 0;
+	padding: 0;
+}
+
+div.support li.mail p.txt span.mailadd {
+	margin: 3px 0 3px;
+	display: block;
+	font-weight: bold;
+	padding: 3px 0 3px 0;
+	font-size: 90%;
+}
+
+div.support li.mail p.txt span.kome {
+	margin: 0;
+	padding: 0;
+	display: block;
+	padding: 0 0 0 0;
+	font-size: 70%;
+	color: #B92626;
+}
+
+/*シングルページ用ヘッダー*/
+
+footer.single {
+	display: block;
+	padding-top: 0;
+	margin: 40px 0 0 0;
+	background-image: none;
+}
+
+/* --------------------------------------
+　共通
+-------------------------------------- */
+
+/*フォント*/
+
+.font-color_red {
+	color: #f00000;
+}
+
+.font-color_blue {
+	color: #0062ff;
+}
+
+.font-color_green {
+	color: #68A652;
+}
+
+.font-size_small {
+	font-size: 80%;
+}
+
+.font-size_large {
+	font-size: 120%;
+}
+
+.align_center {
+	text-align: center;
+}
+
+.align_left {
+	text-align: left;
+}
+
+.align_right {
+	text-align: right;
+}
+
+/* --------------------------------------
+　見出し
+-------------------------------------- */
+
+.title {
+	padding: 5px;
+	font-size: 1.375em;
+	font-weight: bold;
+	border-bottom: 2px dotted #68822A;
+}
+
+.sub-comment {
+	background-image: url(../images/ico_leaf.png);
+	background-position: 0 10px;
+	background-repeat: no-repeat;
+	padding: 3px 0 3px 20px;
+	margin: 10px 0;
+	font-size: 0.875em;
+}
+
+/* --------------------------------------
+　見出し
+-------------------------------------- */
+
+.genkikun_logout {
+	width: 110px;
+	height: auto;
+}

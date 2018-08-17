@@ -1,0 +1,312 @@
+@charset "utf-8";
+.pc_on {
+	display: block;
+}
+
+.sp_on {
+	display: none;
+}
+
+@media screen and (max-width:768px) {
+
+	/* スライドインメニュー */
+	html {
+		position: relative;
+		overflow-x: hidden;
+	}
+	body {
+		position: relative;
+		overflow-x: hidden;
+		margin: 0;
+	}
+	#sub-column {
+		position: absolute;
+		top: 0;
+		right: -240px;
+		width: 240px;
+		height: 100%;
+		background: #86AD36;
+		z-index: 1001;
+	}
+	#top-main-column {
+		position: relative;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+	#main-single {
+		width: 100%;
+		padding: 0 10px
+	}
+	#button {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 70px;
+		padding: 0 0 10px 0;
+		border: 2px solid #86AD36;
+		border-right: 0px solid #86AD36;
+		background-color: #fff;
+		border-radius: 4px 0 0 4px;
+		color: #374617;
+		z-index: 1002;
+	}
+	.css-bar {
+		display: block;
+		position: relative;
+		margin: 20px auto 15px auto;
+		padding: 0;
+		background: #86AD36;
+	}
+	.css-bar,
+	.css-bar:before,
+	.css-bar:after {
+		width: 28px;
+		height: 3px;
+	}
+	.css-bar:before,
+	.css-bar:after {
+		display: block;
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 0;
+		background: #86AD36;
+	}
+	.css-bar:before {
+		margin-top: -8px;
+	}
+	.css-bar:after {
+		margin-top: 4px;
+	}
+	.layer {
+		position: fixed;
+		top: 0;
+		z-index: 1000;
+		display: none;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.5);
+		;
+	}
+	body.open {
+		position: fixed;
+	}
+	/* --- 共有 -- */
+	.pc_on {
+		display: none;
+	}
+	.sp_on {
+		display: block;
+	}
+	* {
+		box-sizing: border-box;
+	}
+	img {
+		width: auto;
+		height: auto;
+		max-width: 100%;
+		max-height: 100%;
+	}
+	#header,
+	#main,
+	footer,
+	.container,
+	#main-column {
+		width: 100%;
+	}
+	table {
+		overflow: auto;
+		white-space: nowrap;
+		display: block;
+		width: auto;
+	}
+
+	table tbody {
+		width: 100%;
+		display: table;
+	}
+
+	/*tableにスクロールバーを追加*/
+	table::-webkit-scrollbar {
+		height: 5px;
+	}
+
+	/*tableにスクロールバーを追加*/
+	table::-webkit-scrollbar-track {
+		background: #F1F1F1;
+	}
+
+	/*tableにスクロールバーを追加*/
+	table::-webkit-scrollbar-thumb {
+		background: #BCBCBC;
+	}
+	/*ヘッダー*/
+	.center-box,
+	.header-nav {
+		display: none;
+	}
+	.single .header-nav {
+		display: block;
+	}
+	.gcmail-area {
+		display: none;
+	}
+	.sp_gclogo {
+		padding: 35px 0 0 0;
+		margin-right: 60px;
+	}
+	/*左カラム*/
+	#gnavi {
+		background: none;
+		background-color: #82BC3F;
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		overflow: hidden;
+	}
+	#gnavi li {
+		width: 20%;
+		text-align: center;
+	}
+	#gnavi li a {
+		display: block;
+		padding: 10px;
+		text-align: center;
+	}
+	#gnavi li a img {
+		margin: 0 auto;
+	}
+	.name-box {
+		width: 100%;
+		text-align: center;
+		padding: 10px;
+		margin: 0 0 10px 0;
+		border-bottom: 1px dotted #86AD36;
+		color: #86AD36;
+	}
+	.name-box span {
+		display: block;
+	}
+	.sp-thumbnail-container {
+		display: none;
+	}
+	#top-main-column {
+		width: 100%;
+		padding: 10px;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	#thumb-v {
+		margin: 0;
+		order: 1;
+		width: 100%;
+		display: block;
+	}
+	#pc-slide {
+		display: none;
+	}
+	.top-banner_area {
+		order: 1;
+		width: 100%;
+	}
+	.top-banner_area li {
+		width: 49%;
+		margin: 0 0 20px 0;
+	}
+	.top-banner_area li img {
+		width: 100%;
+	}
+	/*イベント・特集*/
+	.event_title {
+		width: 100%;
+		text-align: center;
+		order: 3;
+	}
+	.top-eve-banner_area {
+		width: 100%;
+		order: 4;
+	}
+	.top-eve-banner_area li,
+	.top-eve-banner_area li:nth-child(-n + 4) {
+		width: 100%;
+		height: auto;
+		margin: -1px 0 0 0;
+		border: 1px solid #000;
+	}
+	.top-eve-banner_area li a {
+		display: block;
+		overflow: hidden;
+	}
+	.top-eve-banner_area li a img {
+		width: 20%;
+		height: auto;
+		float: left;
+	}
+	.top-eve-banner_area li a p {
+		width: 80%;
+		padding: 10px;
+		text-align: left;
+		float: right;
+	}
+	.sp-box_ttl,
+	.sp-box {
+		display: none;
+	}
+
+	/*右カラム*/
+	.gclogo-area {
+		display: none;
+	}
+
+	/*フッター*/
+	.ft_gclogo {
+		display: none;
+	}
+	.footer_link {
+		padding: 20px 10px;
+		-webkit-flex-wrap: wrap;
+		-moz-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		font-size: 90%;
+	}
+	.footer_link ul {
+		width: 50%;
+	}
+	div.support h6 {
+		padding: 10px;
+	}
+	div.support li.tel p.txt span.freedial span {
+		display: block;
+	}
+	div#support_wrap p.comment {
+		padding: 10px;
+	}
+	/*エラー表示用*/
+	#header_error,
+	#header_error h1,
+	#header_error h2,
+	.errorbody,
+	.errorbody ul.error_kome,
+	.errorbody ul.error_kome li,
+	.errorbody ul.menu {
+		width: 100%;
+	}
+	/*table*/
+	.post th,
+	.post td {
+		display: block;
+		width: 100%;
+		text-align: left;
+		padding: 10px;
+	}
+	.post th {
+		padding: 10px;
+		border-top: 1px dotted #c6c6c6;
+		background-color: #f5f5f5;
+	}
+	.post th br {
+		display: none;
+	}
+}

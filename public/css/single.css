@@ -1,0 +1,259 @@
+@charset "utf-8";
+
+
+
+/* --------------------------------------
+
+　ログインエリア
+
+-------------------------------------- */
+
+#main-single {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+#login_box {
+	width: 50%;
+	box-sizing: border-box;
+	padding: 0 10px 0 40px;
+}
+
+.login_title {
+	width: 100%;
+	font-size: 1.375em;
+	font-weight: bold;
+	border-bottom: 1px dotted #68822A;
+	background: url('../images/login_ttl_bg.png') no-repeat 0 0;
+	margin: 20px 0;
+	padding: 5px 10px 10px 40px;
+}
+
+.loginbody input[type="text"],
+.loginbody input[type="password"] {
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.login_helpe li a {
+	display: block;
+	background: url('../images/ico_arrow01.png') no-repeat 0 0;
+	padding: 0 10px 0 35px;
+	margin: 0 0 5px 0;
+	color: #4F4F4F;
+	text-decoration: none;
+}
+
+#register_box {
+	width: 50%;
+	box-sizing: border-box;
+	padding: 0 40px 0 10px;
+}
+
+.register_box_in {
+	background: url('../images/register_box_bg.png') repeat 0 0;
+	border-radius: 8px;
+	padding: 20px;
+	margin: 0 0 20px 0;
+}
+
+/* メンテナンスお知らせ ------------------- */
+
+.mente {
+	width: 930px;
+	clear: both;
+	margin: 0 auto;
+	padding: 60px 0 0;
+}
+
+.mente h2 {
+	margin: 0 0 0;
+	padding: 10px 17px;
+	overflow: hidden;
+	background: url(../common/images/icon_mente.png) 17px 9px no-repeat;
+}
+
+.mente h2 span.tt {
+	margin: 0 0 0;
+	padding: 4px 0 0 30px;
+	float: left;
+	font-weight: bold;
+}
+
+.mente table {
+	margin: 3px auto;
+	padding: 25px;
+	width: 100%;
+	font-size: 0.875rem;
+	border-collapse: collapse;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+
+.mente th {
+	margin: 0;
+	padding: 8px;
+	background: #E5E5E5;
+	text-align: center;
+	border: 1px solid #CECECE;
+}
+
+.mente th.about {
+	width: 250px;
+}
+
+.mente td {
+	margin: 0;
+	padding: 12px;
+	border: 1px solid #CECECE;
+	text-align: center;
+}
+
+.mente td.system {
+	text-align: left;
+	padding: 12px 30px;
+}
+
+.mente ul {
+	margin: 35px 0 0 55px;
+	padding: 0;
+	word-wrap: break-word;
+}
+
+.mente ul li.title {
+	margin: 0 0 10px 0;
+	padding: 0 0 10px;
+	color: #ff0000;
+	font-weight: bold;
+	font-size: 0.875rem;
+}
+
+.mente ul li.txt {
+	margin: 0 0 0 20px;
+	padding: 0 0 5px 0;
+	font-size: 0.875rem;
+	list-style: disc;
+	line-height: 1.4;
+}
+
+/* --------------------------------------
+
+　ログインページ
+
+-------------------------------------- */
+
+.login-top {
+	width: 100%;
+}
+
+.login-top h2 {
+	text-align: center;
+	margin: 40px 0 20px 0;
+}
+
+.login-top_in {
+	background: url('../images/register_box_bg.png') repeat 0 0;
+	border-radius: 8px;
+	padding: 20px;
+	margin: 20px auto 20px auto;
+	width: 50%;
+}
+
+ul.text-list li {
+	font-size: 0.875rem;
+	margin: 0 0 20px 0;
+}
+
+.disc {
+	list-style-type: disc;
+	padding: 0 0 0 20px;
+}
+
+.login-notes {
+	width: 100%;
+}
+
+.login-notes_title {
+	width: 100%;
+	font-size: 1.188em;
+	font-weight: bold;
+	border-bottom: 1px dotted #68822A;
+	background: url('../images/ico_gc.png') no-repeat 0 0;
+	margin: 30px 0 20px 0;
+	padding: 5px 10px 10px 45px;
+}
+
+/* --------------------------------------
+
+　スマートフォン
+
+-------------------------------------- */
+
+@media screen and (max-width:768px) {
+	#login_box {
+		width: 100%;
+		padding: 0;
+	}
+	#register_box {
+		width: 100%;
+		padding: 0;
+	}
+	.register_box_in p {
+		font-size: 90%;
+		margin: 0 0 20px 0;
+	}
+	.mente {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+
+	.mente h2 {
+		margin: 0;
+		padding: 10px 17px;
+	}
+
+	.mente table {
+		width: 100%;
+		padding: 0;
+		margin: 20px 0;
+	}
+	.mente td {
+		margin: 0;
+		padding: 5px;
+		width: auto;
+		white-space: normal;
+	}
+	.mente th.about {
+		width: auto;
+	}
+	.mente td.system {
+		padding: 5px;
+		text-align: left;
+		width: auto;
+	}
+
+	.mente ul {
+		margin: 0;
+		padding: 0;
+		word-wrap: break-word;
+		width: 100%;
+	}
+
+	.login_helpe li a {
+		min-height: 22px;
+		vertical-align: middle;
+	}
+
+
+	.login-top_in {
+		width: 100%;
+	}
+}

@@ -1,16 +1,16 @@
 @section('head')
-<meta charset="UTF-8">
-<base href="https://ww1.greencoop.or.jp/GCweb2/"/>
-<title>@yield('title') | cly7796.net</title>
+<meta charset="utf-8">
 <meta name="description" itemprop="description" content="@yield('description')">
 <meta name="keywords" itemprop="keywords" content="@yield('keywords')">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>@yield('title') | GCweb ｜ グリーンコープ</title>
 <link href="common/css/reset.css" rel="stylesheet" type="text/css" media="all" />
-<link href="common/css/base_gcweb.css" rel="stylesheet" type="text/css" media="all" />
-<script src="common/js/jquery-1.11.1.min.js" type="text/javascript"></script>
-<script src="common/js/jquery.cookie.js" type="text/javascript"></script>
-<script src="common/js/asset.js" type="text/javascript"></script>
-<!--<script type="text/javascript" src="common/js/heightLine.js"></script>-->
-<script src="common/js/common.js" type="text/javascript"></script>
+<link href="common/css/base.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/single.css" rel="stylesheet" type="text/css" media="all" />
+<link href="common/css/responsive.css" rel="stylesheet" type="text/css" media="all" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 @yield('pageCss')
 @yield('pageJs')
 @endsection

@@ -78,7 +78,6 @@ $('#loginMsgBox').css("display","block");
 
 	function hideLoginMsg() {
 		loginClicked = false;
-		removeAct();
 		$('#loginMsgBox').remove();
 	}
 
@@ -88,10 +87,5 @@ $('#loginMsgBox').css("display","block");
 	$(window).on('pagehide', function(evt) {
 		hideLoginMsg();
 	});
-// スマートフォン用画像表示
-  if( spchk() ) {
-		$("body").prepend('<div id="to-sp"><a href="sp_index.html"><img src="images/top/pc_tosp.png" alt="スマートフォン用ページはこちら≫" /></a></div>');
-     $("#container").addClass("backimage");
-  }
 
 });
