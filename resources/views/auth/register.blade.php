@@ -54,7 +54,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="userid" class="col-md-4 col-form-label text-md-right">{{ __('ユーザーId') }}</label>
+                            <label for="userid" class="col-md-4 col-form-label text-md-right">{{ __('ユーザーID') }}</label>
 
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control{{ $errors->has('userid') ? ' is-invalid' : '' }}" name="userid" value="{{ old('userid') }}" required>
